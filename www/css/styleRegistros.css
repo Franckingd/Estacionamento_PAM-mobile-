@@ -10,16 +10,11 @@
 body{
     background-color: var(--bgColorPr);
 }
-body section{
-    display: flex;
-    justify-items: center;
-    align-content: center;
-}
 header{
     height: 105px;
     width: auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
     align-items: center;
     justify-content: center;
     background-color: var(--bgColorSec);
@@ -30,7 +25,7 @@ header p{
     font-size: 15px;
     line-height: 23px;
     letter-spacing: 3px;
-    margin-top: 50px;
+    margin-top: 35px;
     color: white;
     font-family: monospace;
 }
@@ -41,12 +36,13 @@ header p{
 }
 #navbar a{
     text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 18px;
+    font-size: 18.5px;
     border-top-right-radius: 15px;
     background: #28513F;
 }
@@ -55,74 +51,45 @@ header p{
 }
 
 main{
-    margin: 50px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
-    justify-items: center;
-    /*background-color: red;*/
+    /* background-color: red; */
 }
 section{
+    margin-top: 25px;
     width: 320px;
-    height: 100%;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-flow: column wrap; */
     justify-content: center;
 }
 #form{
     width: 100%;
     height: auto;
     background-color: var(--bgColorTer);
-    border-radius: 30px;
+    /* border-radius: 10px; */
+    border-top-left-radius: 30px;
+    border-end-end-radius: 30px;
     box-shadow: 5px 10px 8px #333333;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
-.input{
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    /* background-color: red; */
-}
-
-.registrar{
-    background: #c7c2bf;
-    border: 0;
+#dados p{
+    font-size: 20px;
     padding: 5px;
     border-radius: 10px;
+    text-align: center;
+    /* background: red; */
 }
-.input button:hover{
-    background: #333333;
-    color: white;
-}
-
-#msg{
-    font-size: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.input #confirmacao{
-    display: none;
-    flex-direction: row;
-    align-items: center;
-    justify-items: center;
-}
-#novaCompra{
-    display: none;
-}
-.Registrocp{
-    font-size: medium;
-    background: #28513f56;
-}
-#confirmacao button{
+.btexc{
     background: #c7c2bf;
     border: 0;
     padding: 5px;
-    border-top-left-radius: 10px;
+    margin-top: 5px;
     border-top-right-radius: 10px;
 }
-#confirmacao button:hover{
+.btdt .btexc:hover{
     background: #333333;
     color: aliceblue;
 }
@@ -131,15 +98,4 @@ img{
     margin-top: 38px;
     max-width: 100%;
     width: 100px;
-}
-#novaCompra button{
-    background: #c7c2bf;
-    border: 0;
-    padding: 5px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-#novaCompra button:hover{
-    background: #333333;
-    color: aliceblue;
 }

@@ -13,63 +13,84 @@
     </script>
 </head>
 <body style="background: #458C6C;">
-    
-    <header class="header">
-        <h1>Estacionamento</h1>
+    <header>
+        <img src="img/logo.png">
+        <p>Estacionamento 
+        <br> Rotativo de 
+        <br> Varmeiras</p>
     </header>
-
-    <div class="fundo">
-        <div class="login">
-
-            <div class="form-group">
-                <label for="exampleInputEmail1">Placa</label>
-                <input type="email" class="form-control dentro" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ABC1B34" maxlength="7">
-            </div>
-
-            <br>
-
-            <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Modelo</label><br>
-                  <select class="form-control" id="inlineFormCustomSelect">
-                    <option selected>...</option>
-                    <option value="1">Subcompacto</option>
-                    <option value="2">Compacto</option>
-                    <option value="3">Hatch</option>
-                    <option value="1">Sedan</option>
-                    <option value="2">SUV</option>
-                    <option value="3">Pick-up</option>
-                  </select>
-                </div>
-            </div>
-
-            <br>
-            <div class="hora">
-                <label for="">Hora</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                    <label class="form-check-label" for="exampleRadios1">
-                    1h
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                    2h
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
-                    3h
-                    </label>
-                </div>
-            </div>
-
-            <br>
-            <br>
-            <button type="button" class="btn btn-secondary">Registrar</button>
-        </div>
+    <div id="navbar">  
+        <a href="registros.html">Registros</a>
     </div>
+    <main>
+        <section>
+            <div id="form">
+                <div id="dados">
+
+                    <br>
+
+                    <div class="form-group input">
+                        <label for="placa">Placa</label>
+                        <input type="email" class="form-control dentro" id="placa" aria-describedby="emailHelp" placeholder="ABC1B34 ou ABC1234" maxlength="7" style="text-align: center;">
+                    </div>
+
+                    <br>
+
+                    <div class="form-row align-items-center input">
+                        <div class="col-auto my-1">
+                          <label class="mr-sm-2 sr-only" for="modelo">Modelo</label><br>
+                          <select class="form-control" id="modelo">
+                            <option selected>...</option>
+                            <option value="3.50">Subcompacto - 3.50</option>
+                            <option value="4.00">Compacto - 4.00</option>
+                            <option value="4.50">Hatch - 4.50</option>
+                            <option value="5.00">Sedan - 5.00</option>
+                            <option value="6.00">SUV - 6.00</option>
+                            <option value="7.00">Pick-up - 7.00</option>
+                          </select>
+                        </div>
+                    </div>
+        
+                    <br>
+                    <div class="input">
+                        <label for="">Horas</label>
+                        <br>
+                        <input type="radio" name="horas" id="hora1" value="1" checked>
+                        <label for="">1H</label><br>
+                        <input type="radio" name="horas" id="hora2" value="2">
+                        <label for="">2H</label><br>
+                        <input type="radio" name="horas" id="hora3" value="3">
+                        <label for="">3H</label>
+                    </div>
+                    <br>
+                    <div class="input">
+                        <button class="registrar" onclick="register()">Registrar</button>
+                    </div>
+                </div> 
+                <div>    
+                    <div class="input">
+                        <br>
+                        <p id="msg"></p>
+                    </div>
+                    <br>
+                    <div class="input">
+                        <div id="confirmacao">
+                            <label class="Registrocp" for="confirm">Deseja realizar o registro?</label>
+                            <br>
+                            <br>
+                            <button id="confirm" onclick="ConfirmaRegistro()">Confirmar</button>
+                        </div>   
+                    </div>
+                    <div class="input">
+                        <div id="novaCompra">
+                            <button onclick="newRegistro()">Realizar nova compra</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <script src="components/script.js"></script>
 </body>
 </html>
